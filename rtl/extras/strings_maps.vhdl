@@ -10,7 +10,7 @@
 --# strings_maps.vhdl - Functions for character set operations
 --# Freely available from VHDL-extras (http://github.com/kevinpt/vhdl-extras)
 --#
---# Copyright © 2010 Kevin Thibedeau
+--# Copyright Â© 2010 Kevin Thibedeau
 --# (kevin 'period' thibedeau 'at' gmail 'punto' com)
 --#
 --# Permission is hereby granted, free of charge, to any person obtaining a
@@ -115,7 +115,7 @@ package strings_maps is
   --#  sequence: String of characters to build into a set
   --# Returns:
   --#  A character set with all unique characters from sequence.
-  function to_set( sequence : character_sequence ) return character_set;
+  function to_set( seq : character_sequence ) return character_set;
   
   --## Convert a character into a set.
   --# Args:
@@ -267,11 +267,11 @@ package body strings_maps is
 
 
   --## Convert a character sequence to a set
-  function to_set( sequence : character_sequence ) return character_set is
+  function to_set( seq : character_sequence ) return character_set is
     variable result : character_set := null_set;
   begin
-    for i in sequence'range loop
-      result(sequence(i)) := true;
+    for i in seq'range loop
+      result(seq(i)) := true;
     end loop;
 
     return result;
